@@ -14,6 +14,7 @@ namespace RandFailuresFS2020
     public partial class Form1 : Form
     {
         ISimCon oSimCon = null;
+        FileSystemWatcher fileWatcher = null;
 
         public Form1()
         {
@@ -31,21 +32,6 @@ namespace RandFailuresFS2020
 
             setLastSettings();
 
-            //////////////////
-
-            try
-            {
-                System.Net.WebClient wc = new System.Net.WebClient();
-                string webData = wc.DownloadString("https://gist.githubusercontent.com/kanaron/31fa6f850af5659f97257038b9e17055/raw/1f279d7842ac9878b56b8a79c62f44620028ac0c/rftest");      
-
-                Console.WriteLine(webData);
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-
-            ////////////////////////
 
 
         }
@@ -178,7 +164,7 @@ namespace RandFailuresFS2020
             }
         }
 
-        private void btnStart_Click(object sender, EventArgs e)
+        public void startSimCon()
         {
             if (checkMinMax())
             {
@@ -210,13 +196,23 @@ namespace RandFailuresFS2020
             }
         }
 
-        private void btnStop_Click(object sender, EventArgs e)
+        public void stopSimCon()
         {
             oSimCon.stopTimers();
             btnStop.Enabled = false;
             stopToolStripMenuItem.Enabled = false;
             btnStart.Enabled = true;
             StartToolStripMenuItem.Enabled = true;
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            startSimCon();
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            stopSimCon();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -335,20 +331,6 @@ namespace RandFailuresFS2020
         private void nruNoFails_ValueChanged(object sender, EventArgs e)
         {
             oSimCon.setMaxNoFails((int)nruNoFails.Value);
-        }
-
-        private void GitLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            GitLink.LinkVisited = true;
-
-            System.Diagnostics.Process.Start("https://github.com/kanaron/RandFailuresFS2020");
-        }
-
-        private void PayPalLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            GitLink.LinkVisited = true;
-
-            System.Diagnostics.Process.Start("https://www.paypal.com/paypalme/kanaron");
         }
         #endregion
 
@@ -495,5 +477,114 @@ namespace RandFailuresFS2020
             saveSettings();
         }
 
+        private void tpList_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fileSystemWatcher1_Changed(object sender, FileSystemEventArgs e)
+        {
+
+        }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void label157_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonFile_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.InitialDirectory = @"C:\";
+            saveFileDialog1.Title = "File to check";
+            saveFileDialog1.CheckFileExists = false;
+            saveFileDialog1.CheckPathExists = true;
+            saveFileDialog1.DefaultExt = "txt";
+            saveFileDialog1.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.RestoreDirectory = true;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                buttonFile.Text = saveFileDialog1.FileName;
+                createWatcher(saveFileDialog1.FileName);
+            }
+        }
+
+        private void createWatcher(string fileName)
+        {
+            string dir = Path.GetDirectoryName(fileName);
+            fileWatcher = new FileSystemWatcher(dir);
+
+            fileWatcher.NotifyFilter = NotifyFilters.Attributes
+                                 | NotifyFilters.CreationTime
+                                 | NotifyFilters.DirectoryName
+                                 | NotifyFilters.FileName
+                                 | NotifyFilters.LastAccess
+                                 | NotifyFilters.LastWrite
+                                 | NotifyFilters.Security
+                                 | NotifyFilters.Size;
+
+            fileWatcher.Changed += OnChanged;
+            fileWatcher.Created += OnCreated;
+            fileWatcher.Deleted += OnDeleted;
+
+            //fileWatcher.Filter = "*.txt";
+            fileWatcher.IncludeSubdirectories = true;
+            fileWatcher.EnableRaisingEvents = true;
+
+            //XXX: This didn't seem to work.
+            //fileWatcher.SynchronizingObject = this;
+        }
+        private void OnChanged(object sender, FileSystemEventArgs e)
+        {
+            if (e.ChangeType != WatcherChangeTypes.Changed)
+            {
+                return;
+            }
+            Console.WriteLine($"Changed: {e.FullPath}");
+            if (e.FullPath == buttonFile.Text)
+            {
+                Console.WriteLine($"starting failures!");
+                Program.form1.Invoke(new Action(
+                delegate ()
+                {
+                    Program.form1.startSimCon();
+                }));
+            }
+        }
+
+        private void OnCreated(object sender, FileSystemEventArgs e)
+        {
+            string value = $"Created: {e.FullPath}";
+            Console.WriteLine(value);
+            if (e.FullPath == buttonFile.Text)
+            {
+                Console.WriteLine($"starting failures");
+                Program.form1.Invoke(new Action(
+                delegate ()
+                {
+                    Program.form1.startSimCon();
+                }));
+            }
+        }
+
+        private void OnDeleted(object sender, FileSystemEventArgs e)
+        {
+            Console.WriteLine($"Deleted: {e.FullPath}");
+            if (e.FullPath == buttonFile.Text)
+            {
+                Console.WriteLine($"stopping failures");
+                Program.form1.Invoke(new Action(
+                delegate ()
+                {
+                    Program.form1.stopSimCon();
+                }));
+            }
+        }
     }
 }

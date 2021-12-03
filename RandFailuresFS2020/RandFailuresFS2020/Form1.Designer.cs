@@ -52,15 +52,6 @@
             this.cbInstant = new System.Windows.Forms.CheckBox();
             this.label60 = new System.Windows.Forms.Label();
             this.nruAll = new System.Windows.Forms.NumericUpDown();
-            this.gbDisclaimer = new System.Windows.Forms.GroupBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.PayPalLink = new System.Windows.Forms.LinkLabel();
-            this.GitLink = new System.Windows.Forms.LinkLabel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.label104 = new System.Windows.Forms.Label();
             this.label105 = new System.Windows.Forms.Label();
             this.label103 = new System.Windows.Forms.Label();
@@ -70,6 +61,20 @@
             this.nruMaxTime = new System.Windows.Forms.NumericUpDown();
             this.nruMaxAlt = new System.Windows.Forms.NumericUpDown();
             this.tpAvionics = new System.Windows.Forms.TabPage();
+            this.label153 = new System.Windows.Forms.Label();
+            this.label154 = new System.Windows.Forms.Label();
+            this.nruFlightControlSurfacesAll = new System.Windows.Forms.NumericUpDown();
+            this.gbFlightControlSufraces = new System.Windows.Forms.GroupBox();
+            this.label156 = new System.Windows.Forms.Label();
+            this.label147 = new System.Windows.Forms.Label();
+            this.label148 = new System.Windows.Forms.Label();
+            this.label149 = new System.Windows.Forms.Label();
+            this.label150 = new System.Windows.Forms.Label();
+            this.label151 = new System.Windows.Forms.Label();
+            this.label152 = new System.Windows.Forms.Label();
+            this.fControlAileron = new System.Windows.Forms.NumericUpDown();
+            this.fControlRudder = new System.Windows.Forms.NumericUpDown();
+            this.fControlElevator = new System.Windows.Forms.NumericUpDown();
             this.label73 = new System.Windows.Forms.Label();
             this.label74 = new System.Windows.Forms.Label();
             this.label75 = new System.Windows.Forms.Label();
@@ -283,6 +288,7 @@
             this.evBird2 = new System.Windows.Forms.NumericUpDown();
             this.evBird1 = new System.Windows.Forms.NumericUpDown();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label155 = new System.Windows.Forms.Label();
             this.label141 = new System.Windows.Forms.Label();
             this.label140 = new System.Windows.Forms.Label();
             this.label126 = new System.Windows.Forms.Label();
@@ -300,21 +306,8 @@
             this.btnConnect = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
             this.label44 = new System.Windows.Forms.Label();
-            this.gbFlightControlSufraces = new System.Windows.Forms.GroupBox();
-            this.label147 = new System.Windows.Forms.Label();
-            this.label148 = new System.Windows.Forms.Label();
-            this.label149 = new System.Windows.Forms.Label();
-            this.label150 = new System.Windows.Forms.Label();
-            this.label151 = new System.Windows.Forms.Label();
-            this.label152 = new System.Windows.Forms.Label();
-            this.fControlAileron = new System.Windows.Forms.NumericUpDown();
-            this.fControlRudder = new System.Windows.Forms.NumericUpDown();
-            this.fControlElevator = new System.Windows.Forms.NumericUpDown();
-            this.label153 = new System.Windows.Forms.Label();
-            this.label154 = new System.Windows.Forms.Label();
-            this.nruFlightControlSurfacesAll = new System.Windows.Forms.NumericUpDown();
-            this.label155 = new System.Windows.Forms.Label();
-            this.label156 = new System.Windows.Forms.Label();
+            this.label157 = new System.Windows.Forms.Label();
+            this.buttonFile = new System.Windows.Forms.Button();
             this.tcFailures.SuspendLayout();
             this.tpList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nruMinSpeed)).BeginInit();
@@ -323,14 +316,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.nruMinAlt)).BeginInit();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nruAll)).BeginInit();
-            this.gbDisclaimer.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nruNoFails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nruMaxTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nruMaxAlt)).BeginInit();
             this.tpAvionics.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nruFlightControlSurfacesAll)).BeginInit();
+            this.gbFlightControlSufraces.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fControlAileron)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fControlRudder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fControlElevator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nruGearAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nruSystemAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nruFuelAll)).BeginInit();
@@ -415,11 +409,6 @@
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.gbFlightControlSufraces.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fControlAileron)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fControlRudder)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fControlElevator)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nruFlightControlSurfacesAll)).BeginInit();
             this.SuspendLayout();
             // 
             // tcFailures
@@ -442,6 +431,8 @@
             // 
             // tpList
             // 
+            this.tpList.Controls.Add(this.buttonFile);
+            this.tpList.Controls.Add(this.label157);
             this.tpList.Controls.Add(this.label135);
             this.tpList.Controls.Add(this.label136);
             this.tpList.Controls.Add(this.nruMinSpeed);
@@ -458,10 +449,6 @@
             this.tpList.Controls.Add(this.groupBox7);
             this.tpList.Controls.Add(this.label60);
             this.tpList.Controls.Add(this.nruAll);
-            this.tpList.Controls.Add(this.gbDisclaimer);
-            this.tpList.Controls.Add(this.groupBox3);
-            this.tpList.Controls.Add(this.groupBox2);
-            this.tpList.Controls.Add(this.groupBox1);
             this.tpList.Controls.Add(this.label104);
             this.tpList.Controls.Add(this.label105);
             this.tpList.Controls.Add(this.label103);
@@ -476,6 +463,7 @@
             this.tpList.TabIndex = 13;
             this.tpList.Text = "Options";
             this.tpList.UseVisualStyleBackColor = true;
+            this.tpList.Click += new System.EventHandler(this.tpList_Click);
             // 
             // label135
             // 
@@ -726,106 +714,6 @@
             0});
             this.nruAll.ValueChanged += new System.EventHandler(this.nruAll_ValueChanged);
             // 
-            // gbDisclaimer
-            // 
-            this.gbDisclaimer.Controls.Add(this.richTextBox2);
-            this.gbDisclaimer.Location = new System.Drawing.Point(3, 246);
-            this.gbDisclaimer.Name = "gbDisclaimer";
-            this.gbDisclaimer.Size = new System.Drawing.Size(247, 82);
-            this.gbDisclaimer.TabIndex = 31;
-            this.gbDisclaimer.TabStop = false;
-            this.gbDisclaimer.Text = "Disclaimer";
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox2.Location = new System.Drawing.Point(3, 16);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(241, 63);
-            this.richTextBox2.TabIndex = 0;
-            this.richTextBox2.Text = "Not all failures will work with some aircrafts. It all depends on aircraft. Engin" +
-    "e 4 failure won\'t work on aircraft with two engines. Also some panel failures wo" +
-    "n\'t work with some aircrafts.";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.PayPalLink);
-            this.groupBox3.Controls.Add(this.GitLink);
-            this.groupBox3.Location = new System.Drawing.Point(256, 247);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(274, 78);
-            this.groupBox3.TabIndex = 30;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "GitHub and PayPal";
-            // 
-            // PayPalLink
-            // 
-            this.PayPalLink.AutoSize = true;
-            this.PayPalLink.Location = new System.Drawing.Point(6, 43);
-            this.PayPalLink.Name = "PayPalLink";
-            this.PayPalLink.Size = new System.Drawing.Size(218, 13);
-            this.PayPalLink.TabIndex = 1;
-            this.PayPalLink.TabStop = true;
-            this.PayPalLink.Text = "https://www.paypal.com/paypalme/kanaron";
-            this.PayPalLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.PayPalLink_LinkClicked);
-            // 
-            // GitLink
-            // 
-            this.GitLink.AutoSize = true;
-            this.GitLink.Location = new System.Drawing.Point(6, 19);
-            this.GitLink.Name = "GitLink";
-            this.GitLink.Size = new System.Drawing.Size(243, 13);
-            this.GitLink.TabIndex = 0;
-            this.GitLink.TabStop = true;
-            this.GitLink.Text = "https://github.com/kanaron/RandFailuresFS2020";
-            this.GitLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.GitLink_LinkClicked);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.richTextBox4);
-            this.groupBox2.Location = new System.Drawing.Point(256, 181);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(274, 65);
-            this.groupBox2.TabIndex = 28;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Bug / Help";
-            // 
-            // richTextBox4
-            // 
-            this.richTextBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox4.Location = new System.Drawing.Point(3, 16);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.ReadOnly = true;
-            this.richTextBox4.Size = new System.Drawing.Size(268, 46);
-            this.richTextBox4.TabIndex = 0;
-            this.richTextBox4.Text = "If you need help or if you found bug in my add-on, please contact me via email wi" +
-    "th \"Bug\" or \"Help\" in email thread.";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.richTextBox3);
-            this.groupBox1.Location = new System.Drawing.Point(256, 87);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(274, 88);
-            this.groupBox1.TabIndex = 29;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Author and contact";
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox3.Location = new System.Drawing.Point(3, 16);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.ReadOnly = true;
-            this.richTextBox3.Size = new System.Drawing.Size(268, 69);
-            this.richTextBox3.TabIndex = 1;
-            this.richTextBox3.Text = "Author: Mateusz \"Kanaron\" Godziek\nemail:\nkanaron125@gmail.com\ndiscord: PL_Kanaron" +
-    "#5564";
-            // 
             // label104
             // 
             this.label104.AutoSize = true;
@@ -953,6 +841,137 @@
             this.tpAvionics.TabIndex = 0;
             this.tpAvionics.Text = "System";
             this.tpAvionics.UseVisualStyleBackColor = true;
+            // 
+            // label153
+            // 
+            this.label153.AutoSize = true;
+            this.label153.Location = new System.Drawing.Point(512, 50);
+            this.label153.Name = "label153";
+            this.label153.Size = new System.Drawing.Size(15, 13);
+            this.label153.TabIndex = 95;
+            this.label153.Text = "%";
+            // 
+            // label154
+            // 
+            this.label154.AutoSize = true;
+            this.label154.Location = new System.Drawing.Point(412, 50);
+            this.label154.Name = "label154";
+            this.label154.Size = new System.Drawing.Size(48, 13);
+            this.label154.TabIndex = 94;
+            this.label154.Text = "P.F.C. to";
+            // 
+            // nruFlightControlSurfacesAll
+            // 
+            this.nruFlightControlSurfacesAll.Location = new System.Drawing.Point(466, 48);
+            this.nruFlightControlSurfacesAll.Name = "nruFlightControlSurfacesAll";
+            this.nruFlightControlSurfacesAll.Size = new System.Drawing.Size(40, 20);
+            this.nruFlightControlSurfacesAll.TabIndex = 93;
+            this.nruFlightControlSurfacesAll.ValueChanged += new System.EventHandler(this.nruFlightControlSurfacesAll_ValueChanged);
+            // 
+            // gbFlightControlSufraces
+            // 
+            this.gbFlightControlSufraces.Controls.Add(this.label156);
+            this.gbFlightControlSufraces.Controls.Add(this.label147);
+            this.gbFlightControlSufraces.Controls.Add(this.label148);
+            this.gbFlightControlSufraces.Controls.Add(this.label149);
+            this.gbFlightControlSufraces.Controls.Add(this.label150);
+            this.gbFlightControlSufraces.Controls.Add(this.label151);
+            this.gbFlightControlSufraces.Controls.Add(this.label152);
+            this.gbFlightControlSufraces.Controls.Add(this.fControlAileron);
+            this.gbFlightControlSufraces.Controls.Add(this.fControlRudder);
+            this.gbFlightControlSufraces.Controls.Add(this.fControlElevator);
+            this.gbFlightControlSufraces.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.gbFlightControlSufraces.ForeColor = System.Drawing.Color.Red;
+            this.gbFlightControlSufraces.Location = new System.Drawing.Point(8, 163);
+            this.gbFlightControlSufraces.Name = "gbFlightControlSufraces";
+            this.gbFlightControlSufraces.Size = new System.Drawing.Size(167, 121);
+            this.gbFlightControlSufraces.TabIndex = 22;
+            this.gbFlightControlSufraces.TabStop = false;
+            this.gbFlightControlSufraces.Text = "Primary flight controls";
+            // 
+            // label156
+            // 
+            this.label156.AutoSize = true;
+            this.label156.Location = new System.Drawing.Point(46, 89);
+            this.label156.Name = "label156";
+            this.label156.Size = new System.Drawing.Size(64, 13);
+            this.label156.TabIndex = 22;
+            this.label156.Text = "Beta tests";
+            // 
+            // label147
+            // 
+            this.label147.AutoSize = true;
+            this.label147.Location = new System.Drawing.Point(151, 68);
+            this.label147.Name = "label147";
+            this.label147.Size = new System.Drawing.Size(16, 13);
+            this.label147.TabIndex = 21;
+            this.label147.Text = "%";
+            // 
+            // label148
+            // 
+            this.label148.AutoSize = true;
+            this.label148.Location = new System.Drawing.Point(151, 42);
+            this.label148.Name = "label148";
+            this.label148.Size = new System.Drawing.Size(16, 13);
+            this.label148.TabIndex = 20;
+            this.label148.Text = "%";
+            // 
+            // label149
+            // 
+            this.label149.AutoSize = true;
+            this.label149.Location = new System.Drawing.Point(151, 16);
+            this.label149.Name = "label149";
+            this.label149.Size = new System.Drawing.Size(16, 13);
+            this.label149.TabIndex = 19;
+            this.label149.Text = "%";
+            // 
+            // label150
+            // 
+            this.label150.AutoSize = true;
+            this.label150.Location = new System.Drawing.Point(6, 68);
+            this.label150.Name = "label150";
+            this.label150.Size = new System.Drawing.Size(85, 13);
+            this.label150.TabIndex = 18;
+            this.label150.Text = "Aileron failure";
+            // 
+            // label151
+            // 
+            this.label151.AutoSize = true;
+            this.label151.Location = new System.Drawing.Point(6, 42);
+            this.label151.Name = "label151";
+            this.label151.Size = new System.Drawing.Size(87, 13);
+            this.label151.TabIndex = 17;
+            this.label151.Text = "Rudder failure";
+            // 
+            // label152
+            // 
+            this.label152.AutoSize = true;
+            this.label152.Location = new System.Drawing.Point(6, 16);
+            this.label152.Name = "label152";
+            this.label152.Size = new System.Drawing.Size(93, 13);
+            this.label152.TabIndex = 16;
+            this.label152.Text = "Elevator failure";
+            // 
+            // fControlAileron
+            // 
+            this.fControlAileron.Location = new System.Drawing.Point(105, 66);
+            this.fControlAileron.Name = "fControlAileron";
+            this.fControlAileron.Size = new System.Drawing.Size(40, 20);
+            this.fControlAileron.TabIndex = 15;
+            // 
+            // fControlRudder
+            // 
+            this.fControlRudder.Location = new System.Drawing.Point(105, 40);
+            this.fControlRudder.Name = "fControlRudder";
+            this.fControlRudder.Size = new System.Drawing.Size(40, 20);
+            this.fControlRudder.TabIndex = 14;
+            // 
+            // fControlElevator
+            // 
+            this.fControlElevator.Location = new System.Drawing.Point(105, 14);
+            this.fControlElevator.Name = "fControlElevator";
+            this.fControlElevator.Size = new System.Drawing.Size(40, 20);
+            this.fControlElevator.TabIndex = 13;
             // 
             // label73
             // 
@@ -2953,37 +2972,44 @@
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(533, 331);
             this.tabPage4.TabIndex = 16;
-            this.tabPage4.Text = "Twitch";
+            this.tabPage4.Text = "About";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label155
+            // 
+            this.label155.AutoSize = true;
+            this.label155.Location = new System.Drawing.Point(126, 177);
+            this.label155.Name = "label155";
+            this.label155.Size = new System.Drawing.Size(137, 13);
+            this.label155.TabIndex = 4;
+            this.label155.Text = "discord: PL_Kanaron#5564";
             // 
             // label141
             // 
             this.label141.AutoSize = true;
-            this.label141.Location = new System.Drawing.Point(107, 99);
+            this.label141.Location = new System.Drawing.Point(126, 164);
             this.label141.Name = "label141";
-            this.label141.Size = new System.Drawing.Size(319, 13);
+            this.label141.Size = new System.Drawing.Size(146, 13);
             this.label141.TabIndex = 3;
-            this.label141.Text = "For more informations contact me via mail kanaron125@gmail.com";
+            this.label141.Text = "mail: kanaron125@gmail.com";
             // 
             // label140
             // 
             this.label140.AutoSize = true;
-            this.label140.Location = new System.Drawing.Point(64, 74);
+            this.label140.Location = new System.Drawing.Point(50, 149);
             this.label140.Name = "label140";
-            this.label140.Size = new System.Drawing.Size(405, 13);
+            this.label140.Size = new System.Drawing.Size(217, 13);
             this.label140.TabIndex = 2;
-            this.label140.Text = "Failures can be also triggered by specyfic ammount of bits donated to specyfic fa" +
-    "ilure";
+            this.label140.Text = "Original Author: Mateusz \"Kanaron\" Godziek\n";
             // 
             // label126
             // 
             this.label126.AutoSize = true;
             this.label126.Location = new System.Drawing.Point(50, 49);
             this.label126.Name = "label126";
-            this.label126.Size = new System.Drawing.Size(433, 13);
+            this.label126.Size = new System.Drawing.Size(391, 13);
             this.label126.TabIndex = 0;
-            this.label126.Text = "There is RandFailuresFS2020Stream edition which allows to trigger failures via Tw" +
-    "itch chat";
+            this.label126.Text = "This is a fork RandFailuresFS2020 from DrBeardsly (DrBeardsly#4697 on Discord)";
             // 
             // menuStrip1
             // 
@@ -3010,7 +3036,7 @@
             // connectToolStripMenuItem
             // 
             this.connectToolStripMenuItem.Name = "connectToolStripMenuItem";
-            this.connectToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.connectToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.connectToolStripMenuItem.Text = "Connect";
             this.connectToolStripMenuItem.Click += new System.EventHandler(this.btnConnect_Click);
             // 
@@ -3018,7 +3044,7 @@
             // 
             this.StartToolStripMenuItem.Enabled = false;
             this.StartToolStripMenuItem.Name = "StartToolStripMenuItem";
-            this.StartToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.StartToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.StartToolStripMenuItem.Text = "Start";
             this.StartToolStripMenuItem.Click += new System.EventHandler(this.btnStart_Click);
             // 
@@ -3026,14 +3052,14 @@
             // 
             this.stopToolStripMenuItem.Enabled = false;
             this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-            this.stopToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.stopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.stopToolStripMenuItem.Text = "Stop";
             this.stopToolStripMenuItem.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -3121,145 +3147,25 @@
             this.label44.TabIndex = 77;
             this.label44.Text = "Failures";
             // 
-            // gbFlightControlSufraces
+            // label157
             // 
-            this.gbFlightControlSufraces.Controls.Add(this.label156);
-            this.gbFlightControlSufraces.Controls.Add(this.label147);
-            this.gbFlightControlSufraces.Controls.Add(this.label148);
-            this.gbFlightControlSufraces.Controls.Add(this.label149);
-            this.gbFlightControlSufraces.Controls.Add(this.label150);
-            this.gbFlightControlSufraces.Controls.Add(this.label151);
-            this.gbFlightControlSufraces.Controls.Add(this.label152);
-            this.gbFlightControlSufraces.Controls.Add(this.fControlAileron);
-            this.gbFlightControlSufraces.Controls.Add(this.fControlRudder);
-            this.gbFlightControlSufraces.Controls.Add(this.fControlElevator);
-            this.gbFlightControlSufraces.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.gbFlightControlSufraces.ForeColor = System.Drawing.Color.Red;
-            this.gbFlightControlSufraces.Location = new System.Drawing.Point(8, 163);
-            this.gbFlightControlSufraces.Name = "gbFlightControlSufraces";
-            this.gbFlightControlSufraces.Size = new System.Drawing.Size(167, 121);
-            this.gbFlightControlSufraces.TabIndex = 22;
-            this.gbFlightControlSufraces.TabStop = false;
-            this.gbFlightControlSufraces.Text = "Primary flight controls";
+            this.label157.AutoSize = true;
+            this.label157.Location = new System.Drawing.Point(8, 252);
+            this.label157.Name = "label157";
+            this.label157.Size = new System.Drawing.Size(71, 13);
+            this.label157.TabIndex = 91;
+            this.label157.Text = "File to check:";
+            this.label157.Click += new System.EventHandler(this.label157_Click);
             // 
-            // label147
+            // buttonFile
             // 
-            this.label147.AutoSize = true;
-            this.label147.Location = new System.Drawing.Point(151, 68);
-            this.label147.Name = "label147";
-            this.label147.Size = new System.Drawing.Size(16, 13);
-            this.label147.TabIndex = 21;
-            this.label147.Text = "%";
-            // 
-            // label148
-            // 
-            this.label148.AutoSize = true;
-            this.label148.Location = new System.Drawing.Point(151, 42);
-            this.label148.Name = "label148";
-            this.label148.Size = new System.Drawing.Size(16, 13);
-            this.label148.TabIndex = 20;
-            this.label148.Text = "%";
-            // 
-            // label149
-            // 
-            this.label149.AutoSize = true;
-            this.label149.Location = new System.Drawing.Point(151, 16);
-            this.label149.Name = "label149";
-            this.label149.Size = new System.Drawing.Size(16, 13);
-            this.label149.TabIndex = 19;
-            this.label149.Text = "%";
-            // 
-            // label150
-            // 
-            this.label150.AutoSize = true;
-            this.label150.Location = new System.Drawing.Point(6, 68);
-            this.label150.Name = "label150";
-            this.label150.Size = new System.Drawing.Size(85, 13);
-            this.label150.TabIndex = 18;
-            this.label150.Text = "Aileron failure";
-            // 
-            // label151
-            // 
-            this.label151.AutoSize = true;
-            this.label151.Location = new System.Drawing.Point(6, 42);
-            this.label151.Name = "label151";
-            this.label151.Size = new System.Drawing.Size(87, 13);
-            this.label151.TabIndex = 17;
-            this.label151.Text = "Rudder failure";
-            // 
-            // label152
-            // 
-            this.label152.AutoSize = true;
-            this.label152.Location = new System.Drawing.Point(6, 16);
-            this.label152.Name = "label152";
-            this.label152.Size = new System.Drawing.Size(93, 13);
-            this.label152.TabIndex = 16;
-            this.label152.Text = "Elevator failure";
-            // 
-            // fControlAileron
-            // 
-            this.fControlAileron.Location = new System.Drawing.Point(105, 66);
-            this.fControlAileron.Name = "fControlAileron";
-            this.fControlAileron.Size = new System.Drawing.Size(40, 20);
-            this.fControlAileron.TabIndex = 15;
-            // 
-            // fControlRudder
-            // 
-            this.fControlRudder.Location = new System.Drawing.Point(105, 40);
-            this.fControlRudder.Name = "fControlRudder";
-            this.fControlRudder.Size = new System.Drawing.Size(40, 20);
-            this.fControlRudder.TabIndex = 14;
-            // 
-            // fControlElevator
-            // 
-            this.fControlElevator.Location = new System.Drawing.Point(105, 14);
-            this.fControlElevator.Name = "fControlElevator";
-            this.fControlElevator.Size = new System.Drawing.Size(40, 20);
-            this.fControlElevator.TabIndex = 13;
-            // 
-            // label153
-            // 
-            this.label153.AutoSize = true;
-            this.label153.Location = new System.Drawing.Point(512, 50);
-            this.label153.Name = "label153";
-            this.label153.Size = new System.Drawing.Size(15, 13);
-            this.label153.TabIndex = 95;
-            this.label153.Text = "%";
-            // 
-            // label154
-            // 
-            this.label154.AutoSize = true;
-            this.label154.Location = new System.Drawing.Point(412, 50);
-            this.label154.Name = "label154";
-            this.label154.Size = new System.Drawing.Size(48, 13);
-            this.label154.TabIndex = 94;
-            this.label154.Text = "P.F.C. to";
-            // 
-            // nruFlightControlSurfacesAll
-            // 
-            this.nruFlightControlSurfacesAll.Location = new System.Drawing.Point(466, 48);
-            this.nruFlightControlSurfacesAll.Name = "nruFlightControlSurfacesAll";
-            this.nruFlightControlSurfacesAll.Size = new System.Drawing.Size(40, 20);
-            this.nruFlightControlSurfacesAll.TabIndex = 93;
-            this.nruFlightControlSurfacesAll.ValueChanged += new System.EventHandler(this.nruFlightControlSurfacesAll_ValueChanged);
-            // 
-            // label155
-            // 
-            this.label155.AutoSize = true;
-            this.label155.Location = new System.Drawing.Point(185, 124);
-            this.label155.Name = "label155";
-            this.label155.Size = new System.Drawing.Size(163, 13);
-            this.label155.TabIndex = 4;
-            this.label155.Text = "or on Discord PL_Kanaron#5564";
-            // 
-            // label156
-            // 
-            this.label156.AutoSize = true;
-            this.label156.Location = new System.Drawing.Point(46, 89);
-            this.label156.Name = "label156";
-            this.label156.Size = new System.Drawing.Size(64, 13);
-            this.label156.TabIndex = 22;
-            this.label156.Text = "Beta tests";
+            this.buttonFile.Location = new System.Drawing.Point(85, 247);
+            this.buttonFile.Name = "buttonFile";
+            this.buttonFile.Size = new System.Drawing.Size(421, 23);
+            this.buttonFile.TabIndex = 92;
+            this.buttonFile.Text = "Click to pick file";
+            this.buttonFile.UseVisualStyleBackColor = true;
+            this.buttonFile.Click += new System.EventHandler(this.buttonFile_Click);
             // 
             // Form1
             // 
@@ -3276,7 +3182,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "RandFailuresFS2020";
+            this.Text = "BeardslyStreamFailuresFS2020";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.tcFailures.ResumeLayout(false);
             this.tpList.ResumeLayout(false);
@@ -3288,16 +3194,17 @@
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nruAll)).EndInit();
-            this.gbDisclaimer.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nruNoFails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nruMaxTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nruMaxAlt)).EndInit();
             this.tpAvionics.ResumeLayout(false);
             this.tpAvionics.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nruFlightControlSurfacesAll)).EndInit();
+            this.gbFlightControlSufraces.ResumeLayout(false);
+            this.gbFlightControlSufraces.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fControlAileron)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fControlRudder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fControlElevator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nruGearAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nruSystemAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nruFuelAll)).EndInit();
@@ -3398,12 +3305,6 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
-            this.gbFlightControlSufraces.ResumeLayout(false);
-            this.gbFlightControlSufraces.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fControlAileron)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fControlRudder)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fControlElevator)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nruFlightControlSurfacesAll)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3528,14 +3429,6 @@
         private System.Windows.Forms.NumericUpDown fE1Leak;
         private System.Windows.Forms.ToolStripMenuItem connectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem StartToolStripMenuItem;
-        private System.Windows.Forms.GroupBox gbDisclaimer;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.LinkLabel GitLink;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RichTextBox richTextBox4;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.RichTextBox richTextBox5;
@@ -3666,7 +3559,6 @@
         private System.Windows.Forms.Label label138;
         private System.Windows.Forms.NumericUpDown nruMaxSpeed;
         private System.Windows.Forms.CheckBox cbSpeed;
-        private System.Windows.Forms.LinkLabel PayPalLink;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label141;
@@ -3696,6 +3588,8 @@
         private System.Windows.Forms.NumericUpDown fControlElevator;
         private System.Windows.Forms.Label label155;
         private System.Windows.Forms.Label label156;
+        private System.Windows.Forms.Label label157;
+        private System.Windows.Forms.Button buttonFile;
     }
 }
 
